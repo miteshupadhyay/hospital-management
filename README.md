@@ -1,4 +1,7 @@
 # hospital-management
-Sample Microserivce
+This is the sample MicroService
 
-This is the samepl MS
+# Run Swagger on Local
+mvn spring-boot:run -Dspring.profiles.active=local
+
+http://localhost:8080/hospitalmanagement/swagger-ui.html
