@@ -10,7 +10,7 @@ import com.mitesh.cloud.techlearn.hospitalmanagement.dto.PatientDto;
 import com.mitesh.cloud.techlearn.hospitalmanagement.entity.Patient;
 
 @Repository
-public interface PatientRepository extends JpaRepository<Patient, Integer> {
+public interface PatientRepository extends JpaRepository<Patient, Long> {
 
 	Patient save(PatientDto patientDto);
 	

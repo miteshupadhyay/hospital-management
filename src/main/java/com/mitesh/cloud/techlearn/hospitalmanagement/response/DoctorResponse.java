@@ -1,33 +1,29 @@
-package com.mitesh.cloud.techlearn.hospitalmanagement.dto;
+package com.mitesh.cloud.techlearn.hospitalmanagement.response;
 
 import java.util.List;
 
-import javax.persistence.Embedded;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.mitesh.cloud.techlearn.hospitalmanagement.dto.DoctorDto;
 import com.mitesh.cloud.techlearn.hospitalmanagement.entity.Doctor;
 import com.mitesh.cloud.techlearn.hospitalmanagement.entity.Insurance;
 
-import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
-@Builder
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@ApiModel("PatientDto")
-public class PatientDto {
+public class DoctorResponse {
 
 	private Long id;
-	private String firstName;
-	private String lastName;
-	private String phone;
-		
-	@Embedded
-	private Insurance insurance;
 	
-	private List<Integer> doctors;
+	private String firstName;
+	
+	private String lastName;
+	
+	private String speciality;
 }

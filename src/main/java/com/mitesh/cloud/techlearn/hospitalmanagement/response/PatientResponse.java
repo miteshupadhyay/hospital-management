@@ -1,4 +1,4 @@
-package com.mitesh.cloud.techlearn.hospitalmanagement.dto;
+package com.mitesh.cloud.techlearn.hospitalmanagement.response;
 
 import java.util.List;
 
@@ -8,7 +8,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.mitesh.cloud.techlearn.hospitalmanagement.entity.Doctor;
 import com.mitesh.cloud.techlearn.hospitalmanagement.entity.Insurance;
 
-import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,8 +17,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@ApiModel("PatientDto")
-public class PatientDto {
+public class PatientResponse {
 
 	private Long id;
 	private String firstName;
@@ -28,6 +26,6 @@ public class PatientDto {
 		
 	@Embedded
 	private Insurance insurance;
+	private List<Doctor> doctors;
 	
-	private List<Integer> doctors;
 }
